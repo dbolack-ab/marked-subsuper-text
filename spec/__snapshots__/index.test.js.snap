@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`subsuper-text Sub and Super 1`] = `
+"<p>This is ^^sub^^ and this is ^super^.</p>
+"
+`;
+
+exports[`subsuper-text Subscript 1`] = `
+"<p>This is ^^subscript^^.</p>
+"
+`;
+
+exports[`subsuper-text Superscript 1`] = `
+"<p>This is ^superscript^.</p>
+"
+`;
