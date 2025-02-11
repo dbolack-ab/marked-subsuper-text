@@ -1,8 +1,8 @@
-export default function(endRegex = []) {
+export default function() {
   return {
     extensions: [
       {
-        name  : 'superSubScript',
+        name  : 'subSuperText',
         level : 'inline',
         start(src) { return src.match(/\^/m)?.index; },  // Hint to Marked.js to stop and check for a match
         tokenizer(src, tokens) {
@@ -17,7 +17,7 @@ export default function(endRegex = []) {
           }
           if(match?.length) {
             return {
-              type   : 'superSubScript', // Should match "name" above
+              type   : 'subSuperText', // Should match "name" above
               raw    : match[0],          // Text to consume from the source
               tag    : isSuper ? 'sup' : 'sub',
               tokens : this.lexer.inlineTokens(match[1])
