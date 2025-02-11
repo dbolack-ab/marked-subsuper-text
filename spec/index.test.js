@@ -11,7 +11,8 @@ describe('subsuper-text', () => {
   });
 
   test('Superscript', () => {
-    marked.use({ extensions: [ subSuper ] });
+    console.log(subSuper);
+    marked.use({ extensions: [subSuper ] });
     expect(marked(trimLines(`This is ^superscript^.`))).toMatchSnapshot();
   });
 

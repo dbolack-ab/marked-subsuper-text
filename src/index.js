@@ -1,5 +1,7 @@
-export default function() {
+export default function(endRegex = []) {
   return {
+    extensions: [
+      {
         name  : 'superSubScript',
         level : 'inline',
         start(src) { return src.match(/\^/m)?.index; },  // Hint to Marked.js to stop and check for a match
@@ -26,4 +28,6 @@ export default function() {
           return `<${token.tag}>${this.parser.parseInline(token.tokens)}</${token.tag}>`;
         }
       }
-};
+    ]
+  };
+}
