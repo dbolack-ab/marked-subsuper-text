@@ -1,16 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`subsuper-text Sub and Super 1`] = `
-"<p>This is ^^sub^^ and this is ^super^.</p>
+exports[`Correct Standard Usage Sub and Super 1`] = `
+"<p>This is <sub>sub</sub> and this is <sup>super</sup>.</p>
 "
 `;
 
-exports[`subsuper-text Subscript 1`] = `
-"<p>This is ^^subscript^^.</p>
+exports[`Correct Standard Usage Subscript 1`] = `
+"<p>This is <sub>subscript</sub>.</p>
 "
 `;
 
-exports[`subsuper-text Superscript 1`] = `
-"<p>This is ^superscript^.</p>
+exports[`Correct Standard Usage Superscript 1`] = `
+"<p>This is <sup>superscript</sup>.</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Five Balanced Carets 1`] = `
+"<p>^^^<sub>text</sub>^^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Four Balanced Carets 1`] = `
+"<p>^^<sub>text</sub>^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Multiple Alternating Super and Subscripts 1`] = `
+"<p>^multiple ^^alternating ^nested ^^super <sup>subs</sup>^^^^^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Multiple Nested Subscripts 1`] = `
+"<p>^^multiple ^^nested <sub>subs</sub>^^^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Multiple Nested Superscripts 1`] = `
+"<p>^multiple ^nested <sup>supers</sup>^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Six Balanced Carets 1`] = `
+"<p>^^^^<sub>text</sub>^^^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Subscript inside a Superscript 1`] = `
+"<p>^some <sub>text</sub> here^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Superscript inside a subscript 1`] = `
+"<p>^^some <sup>text</sup> here^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Three Balanced Carets 1`] = `
+"<p>^<sub>text</sub>^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Tight Ending Superscript inside a subscript 1`] = `
+"<p>^^some <sup>text</sup>^^</p>
+"
+`;
+
+exports[`Incorrect Standard Usage Tight Starting Superscript inside a subscript 1`] = `
+"<p>^^<sup>some</sup> text^^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Leading space in a Superscript 1`] = `
+"<p>^ invalid super^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Leading space in a Superscript 2`] = `
+"<p>^^ invalid sub^^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Subscript - caret in the middle 1`] = `
+"<p>^^caret in ^ middle^^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Subscript - double carets in the middle 1`] = `
+"<p>^^carets in ^^ middle^^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Subscript - loose double carets in the middle 1`] = `
+"<p>^^ lone ^^ double ^^ ^^ carets ^^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Superscript - caret in the middle 1`] = `
+"<p>^caret in ^ middle^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Superscript - double caret in the middle 1`] = `
+"<p>^carets in ^^ middle^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Superscript - loose carets in the middle 1`] = `
+"<p>^ lone ^ ^ ^ carets ^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Trailing space in a Subscript 1`] = `
+"<p>^^invalid sub ^^</p>
+"
+`;
+
+exports[`Invalid Spacing and delimiters Trailing space in a Superscript 1`] = `
+"<p>^invalid super ^</p>
+"
+`;
+
+exports[`Mismatched delimiters No Closing subscript 1`] = `
+"<p>^^mismatched delimiters</p>
+"
+`;
+
+exports[`Mismatched delimiters No closing Superscript 1`] = `
+"<p>^mismatched delimiters</p>
+"
+`;
+
+exports[`Mismatched delimiters No starting Superscript 1`] = `
+"<p>mismatched delimiters^</p>
+"
+`;
+
+exports[`Mismatched delimiters No starting Superscript 2`] = `
+"<p>mismatched delimiters^^</p>
+"
+`;
+
+exports[`Mismatched delimiters Subscript then Superscript 1`] = `
+"<p>^<sup>mismatched delimiters</sup></p>
+"
+`;
+
+exports[`Mismatched delimiters Superscript then Subscript 1`] = `
+"<p><sup>mismatched delimiters</sup>^</p>
 "
 `;
