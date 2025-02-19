@@ -25,7 +25,7 @@ This is ^^subscript^^.
 const marked = require("marked");
 const markedSubSuper = require("marked-subsuper-text");
 
-marked.use({ extensions: [markedSubSuper()] });
+marked.use(markedSubSuper());
 
 const html = marked.parse("This is ^^sub^^ and this is ^super^.");
 console.log(html);
